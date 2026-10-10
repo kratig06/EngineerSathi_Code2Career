@@ -1,36 +1,47 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Engineer Saathi
 
-## Getting Started
+An AI-powered mock interview experience for software engineering candidates.
 
-First, run the development server:
+## Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **Personalized Interviews**: Tailored to target company, role, technical domain, and resume.
+- **Live AI Interviewer**: Animated avatar with natural voice interactions and distinct states.
+- **Adaptive Questions**: Follow-up questions based on the candidate's actual answers.
+- **Integrated Coding Workspace**: Real-time coding editor for technical challenges.
+- **Code Explanation**: AI challenges your specific implementation and design choices.
+- **Post-Interview Report**: Detailed, evidence-based performance report with an actionable improvement plan.
+- **Optional Camera Environment Check**: Consent-based environment and attention signaling.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Setup Instructions
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+2. Copy `.env.example` to `.env.local` and add your API keys:
+   ```bash
+   cp .env.example .env.local
+   ```
 
-## Learn More
+3. Run the development server:
+   ```bash
+   npm run dev
+   ```
 
-To learn more about Next.js, take a look at the following resources:
+4. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Architecture
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **Frontend**: Next.js (App Router), React, TypeScript, Tailwind CSS
+- **UI Components**: Radix UI primitives, Lucide Icons, Framer Motion
+- **State Management**: Zustand
+- **Code Editor**: Monaco Editor
+- **Charts**: Recharts
 
-## Deploy on Vercel
+## Environment Variables
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- `AI_PROVIDER`: The primary AI provider to use (default: `gemini`)
+- `GEMINI_API_KEY`: API key for Google Gemini
+- `GROQ_API_KEY`: API key for Groq (optional secondary provider)
+- `CODE_EXECUTION_API_KEY`: API key for secure sandbox code execution (e.g., Judge0)
