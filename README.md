@@ -112,7 +112,7 @@ cp .env.example .env
 2. Choose a company and target role.
 3. Pick Generic or Custom interview mode.
 4. Complete the rounds and answer resume-specific follow-ups.
-5. Review your report, roadmap and resume recommendations.
+5. Review your report, roadmap & resume recommendations.
 6. Add upcoming interviews to the calendar and practise again.
 
 ## Adoption Plan (planned)
